@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% block title %}Клубы{% endblock %}
+
+{% block content %}
+    <h1>Список клубов</h1><br>
+    <table class="smalltable">
+        <tr><th class="tablepart">Название</th><th class="tablepart">Бронза</th><th class="tablepart">Серебро</th><th class="tablepart">Золото</th><th class="tablepart">Породы</th><th class="tablepart">Отчет</th></tr>
+        {% for el in clubs %}
+           <tr><td class="tablepart">{{ el.name }}</td><td class="tablepart">{{ el.bronze }}</td><td class="tablepart">{{ el.silver }}</td><td class="tablepart">{{ el.gold }}</td><td class="tablepart">{% for breed in el.breeds %}{{ breed }}, {% endfor %}</td><td class="tablepart"><button class="btnmedal">Смотреть</button></td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

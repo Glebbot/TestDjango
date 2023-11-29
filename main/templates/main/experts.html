@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% block title %}Эксперты{% endblock %}
+
+{% block content %}
+    <h1>Список экспертов выставки</h1><br>
+    <table class="bigtable">
+        <tr><th class="tablepart">ФИО</th><th class="tablepart">Ринг</th><th class="tablepart">Клуб</th></tr>
+        {% for el in experts %}
+            <tr><td class="tablepart">{{ el.full_name }}</td><td class="tablepart">{{ el.ring_id }}</td><td class="tablepart">{{ el.club_id }}</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

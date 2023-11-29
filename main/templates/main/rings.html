@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% block title %}Ринги{% endblock %}
+
+{% block content %}
+    <h1>Список экспертов по каждому рингу</h1><br>
+    {% for el in experts %}
+        <p style="font-size: 25px">{{ el.ring }}:
+            {% for name in el.names %}
+                {{ name }},
+            {% endfor %}
+        </p>
+    {% endfor %}
+{% endblock %}

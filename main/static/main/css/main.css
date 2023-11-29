@@ -1,0 +1,69 @@
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    background: linear-gradient(#f8a79b, #cc9d9d);
+}
+aside {
+    background-color: #5f789e;
+    float: left;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 100vh;
+    width: 12%;
+    padding: 8px;
+    font-size: 25px;
+}
+.menu {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    background-color: #04548c;
+    border-radius: 20px;
+    text-decoration: none;
+    width: 95%;
+    margin-top: 10px;
+}
+.menu:hover {
+    color: #f8a79b;
+}
+main {
+    padding: 40px;
+    float: left;
+    font-size: 16px;
+    color: #3c3c6c;
+}
+.bigtable {
+  border-collapse: collapse; /* Объединение границ ячеек */
+  width: 170%;
+  font-size: 25px;
+}
+.smalltable {
+    border-collapse: collapse; /* Объединение границ ячеек */
+    font-size: 25px;
+    width: 120%;
+}
+
+.tablepart {
+  border: 2px solid #3c3c6c; /* Граница каждой ячейки */
+  padding: 8px; /* Отступы в ячейках */
+  text-align: left; /* Выравнивание текста в ячейках */
+}
+
+
+.btnmedal {
+    background-color: #04548c;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+.btnmedal:hover {
+    color: #f8a79b;
+}
+tr:nth-child(even) {
+  background-color: #5f789e; /* Цвет фона четных строк */
+  color: white;
+}
+
