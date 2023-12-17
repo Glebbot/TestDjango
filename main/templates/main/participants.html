@@ -6,7 +6,7 @@
     <table class="bigtable">
         <tr><th class="tablepart">№</th><th class="tablepart">Кличка</th><th class="tablepart">Порода</th><th class="tablepart">Клуб</th><th class="tablepart">Результат</th></tr>
         {% for el in dogs %}
-            <tr><td class="tablepart">{{ el.id }}</td><td class="tablepart">{{ el.name }}</td><td class="tablepart">{{ el.ring_id }}</td><td class="tablepart">{{ el.club_id }}</td><td class="tablepart"><button class="btnmedal">{{ el.medal }}</button></td></tr>
+            <tr><td class="tablepart">{{ el.id }}</td><td class="tablepart">{{ el.name }}</td><td class="tablepart">{{ el.ring_id }}</td><td class="tablepart">{{ el.club_id }}</td><td class="tablepart"><a href="{% url 'participantreport' el.id %}"><button class="btnmedal">{{ el.medal }}</button></a></td></tr>
         {% endfor %}
     </table>
 {% endblock %}

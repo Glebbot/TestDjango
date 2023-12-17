@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Справка о занятии участником призового места{% endblock %}
+
+{% block content %}
+    <h1>Справка о занятии участником призового места</h1>
+    <br><br>
+    {% if participant.medal != 'Нет' %}
+        <p>Данный документ подтверждает что участник {{ participant.name }} из клуба {{ participant.club_id }} получил на выставке призовую медаль: {{ participant.medal }} в породе {{ participant.ring_id }}</p>
+        <br><br>
+        <img src="{% static 'main/img/stamp.png' %}" alt="Штамп">
+    {% else %}
+        <p>Участник {{ participant.name }} не занимал призовых мест на выставке</p>
+    {% endif %}
+{% endblock %}

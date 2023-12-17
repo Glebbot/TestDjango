@@ -8,4 +8,6 @@ urlpatterns = [
     path('participants', views.participants, name='participants'),
     path('rings', views.rings, name='rings'),
     path('experts', views.experts, name='experts'),
+    path('participants/<int:pk>', views.ParticipantReport.as_view(), name='participantreport'),
+    path('clubs/<int:pk>', views.clubReport, name='clubreport'),
 ]

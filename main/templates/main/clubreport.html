@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Отчет о выступлении клуба {{ club.name }}{% endblock %}
+
+{% block content %}
+    <h1>Отчет о выступлении клуба {{ club.name }}</h1><br>
+    <p>Всего участников выступало от клуба: {{ club.count }}</p>
+    <p>Количество золотых медалей: {{ club.gold }}</p>
+    <p>Количество серебряных медалей: {{ club.silver }}</p>
+    <p>Количество бронзовых медалей: {{ club.bronze }}</p>
+    <p>Породы: {% for breed in club.breeds %}{{ breed }}, {% endfor %}</p>
+    <p>Победители: {% for winner in club.winners %}{{ winner }} ({{ winner.ring_id }}), {% endfor %}</p>
+{% endblock %}
