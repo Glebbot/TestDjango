@@ -38,8 +38,8 @@ class Expert(models.Model):
 
 class Participant(models.Model):
     name = models.CharField('Кличка', max_length=100, db_index=True)
-    club_id = models.ForeignKey('Club', on_delete=models.PROTECT)
-    ring_id = models.ForeignKey('Ring', on_delete=models.PROTECT)
+    club_id = models.ForeignKey('Club', on_delete=models.PROTECT, verbose_name='Клуб')
+    ring_id = models.ForeignKey('Ring', on_delete=models.PROTECT, verbose_name='Ринг')
     age=models.IntegerField('Возраст')
     mother=models.CharField('Мать', max_length=200)
     father = models.CharField('Отец', max_length=200)

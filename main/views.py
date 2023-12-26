@@ -63,3 +63,4 @@ def rings(request):
 def experts(request):
     experts_all=Expert.objects.all()
     return render(request, 'main/experts.html',{'experts': experts_all})
+
